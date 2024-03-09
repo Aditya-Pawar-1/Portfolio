@@ -31,6 +31,8 @@ const page3ImageContainer2Img = document.querySelector(
   "#page3-image-container2 img"
 );
 
+const linkedin = document.querySelector(".linkedin");
+
 const page1video = document.querySelector("#video-container video");
 const circle = document.querySelector(".clickCircle");
 const circle1 = document.querySelector("#clickCircle1");
@@ -241,9 +243,17 @@ function arrowAnimation() {
   });
 }
 
+function openLinedin() {
+  linkedin.addEventListener("click", function () {
+    window.open(
+      "https://www.linkedin.com/in/aditya-pawar-dev", "_blank");
+  });
+}
+
 locomotiveAnimation();
 sheryAnimation();
 page3ImageContainerAnimation1();
 page3ImageContainerAnimation2()
 page1videoAnimation();
 arrowAnimation();
+openLinedin();
