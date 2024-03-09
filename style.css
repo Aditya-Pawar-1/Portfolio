@@ -1,0 +1,283 @@
+:root {
+  --primary: #706ffb;
+  --background-black: #000000;
+  --text-white: #ffffff;
+  --linkedin-blue: #0077b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica", "Helvetica Light", Arial, sans-serif;
+  background-color: var(--background-black);
+  color: var(--text-white);
+  user-select: none;
+}
+
+main {
+  width: 100%;
+}
+
+nav {
+  width: 100vw;
+  height: 15vh;
+  position: relative;
+}
+
+#navwrapper {
+  width: 100vw;
+  height: 15vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  z-index: 1000; /* Added z-index to ensure it appears above other content */
+}
+
+#logo {
+  scale: 0.8;
+}
+
+#nav-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nav-mid h3 {
+  font-family: "Helvetica Light";
+  font-weight: 600;
+}
+
+#nav-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#Linkedin {
+  font-size: 3vw;
+}
+
+#Linkedin:hover {
+  scale: 1.2;
+}
+
+#nav-resume-btn {
+  font-size: 1vw;
+  font-weight: 600;
+  padding: 0.8vw 2.2vw;
+  border: none;
+  border-radius: 3vw;
+  background-color: var(--primary);
+  color: var(--text-white);
+}
+
+#page1 {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--background-black);
+  position: relative;
+  overflow: hidden;
+}
+
+#video-container {
+  width: 50vw;
+  height: 40vw;
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  /* border: 2px solid red; */
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#video-container video {
+  position: absolute;
+  top: 0%;
+  left: -20%;
+  width: 150%;
+}
+
+#page1-text {
+  padding: 5vw 0 0 15vw;
+}
+
+#page1-text h2 {
+  font-size: 3vw;
+  margin-bottom: 0.5vw;
+}
+#page1-text h1 {
+  font-size: 10vw;
+  margin-bottom: 2vw;
+  color: var(--primary);
+}
+
+#page1-text p {
+  width: 35vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+  margin-bottom: 1vw;
+}
+
+#page1-text p span {
+  color: var(--primary);
+}
+/* page 2 */
+
+#page2 {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-black);
+}
+
+#page2-text {
+  padding: 5vw 10vw;
+}
+
+#page2 h2 {
+  font-size: 3vw;
+  font-weight: 500;
+}
+
+#page2 h5 {
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+#page2-svg-container {
+  padding: 0 10% 0 17%;
+  gap: 6vw;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.skill-block {
+  width: 8vw;
+  min-height: 10vw;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6vw;
+}
+
+.skill-block:hover {
+  color: var(--primary);
+}
+
+.skill-block i {
+  font-size: 5vw;
+  font-weight: 500;
+}
+
+#cpp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cpp-icon i {
+  font-size: 2vw;
+}
+
+#cpp-icon i:nth-child(1) {
+  font-size: 5vw;
+  padding-bottom: 0.5vw;
+}
+
+.skill-block svg {
+  width: 5vw;
+  max-height: 6vw;
+}
+
+.skill-block h3 {
+  font-weight: 400;
+}
+
+/* page3 */
+#page3 {
+  width: 100%;
+  height: 200vh;
+}
+
+#page3-part1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5vw;
+}
+
+#page3-part2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page3-image-container {
+  height: 80vh;
+  width: 50vw;
+  border-radius: 2vw;
+  background-color: var(--primary);
+  overflow: hidden;
+  position: relative;
+}
+
+.clickCircle {
+  height: 7vw;
+  width: 7vw;
+  border-radius: 50%;
+  background-color: var(--text-white);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-black);
+  border: 2px solid #141414;
+  opacity: 0;
+}
+
+.clickCircle h3 {
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+
+.page3-image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 2vw;
+  opacity: 0;
+}
+
+.page3-image-container h4 {
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
