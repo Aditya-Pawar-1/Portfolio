@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Helevetica";
+  src: url(./assets/fonts/Helvetica.ttf);
+}
+
+@font-face {
+  font-family: "Helevetica Light";
+  src: url(./assets/fonts/helvetica-light-587ebe5a59211.ttf);
+}
+
 :root {
   --primary: #706ffb;
   --background-black: #000000;
