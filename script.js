@@ -31,7 +31,7 @@ const page3ImageContainer2Img = document.querySelector(
   "#page3-image-container2 img"
 );
 
-const linkedin = document.querySelector(".linkedin");
+const linkedin = document.querySelectorAll(".linkedin");
 
 const page1video = document.querySelector("#video-container video");
 const circle = document.querySelector(".clickCircle");
@@ -244,9 +244,17 @@ function arrowAnimation() {
 }
 
 function openLinedin() {
-  linkedin.addEventListener("click", function () {
-    window.open(
-      "https://www.linkedin.com/in/aditya-pawar-dev", "_blank");
+  linkedin.forEach(element => {
+    element.addEventListener("click", function () {
+      window.open(
+        "https://www.linkedin.com/in/aditya-pawar-dev", "_blank");
+    });
+  })
+}
+
+function footerMail(){
+  document.querySelector("#footer-part1").addEventListener("click", function () {
+      
   });
 }
 

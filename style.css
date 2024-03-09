@@ -82,6 +82,7 @@ nav {
 
 #Linkedin {
   font-size: 3vw;
+  cursor: pointer;
 }
 
 #Linkedin:hover {
@@ -290,4 +291,107 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* page4 */
+#page4{
+  height: 100vh;
+  width: 100%;
+  padding-left: 10%;
+}
+
+#page4-text {
+  padding: 5vw 10vw 5vw 0;
+}
+
+#page4 h2 {
+  font-size: 3vw;
+  font-weight: 500;
+  margin-bottom: 0.6vw;
+}
+
+#page4 h5 {
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+#page4-project-cards-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 3vw;
+}
+
+.project-cards{
+  height: 20vw;
+  width: 25vw;
+  background-color: var(--text-white);
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+.project-cards img {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-card-part2 {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-card-part2 button {
+  padding: 0.5vw 1.8vw;
+  border-radius: 1.5vw;
+  border: none;
+  margin-right: 1vw;
+  background-color: var(--primary);
+  color: var(--text-white);
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.project-card-part2 h3 {
+  font-family: "helvetica";
+  color: var(--background-black);
+  padding-left: 1vw;
+}
+
+footer {
+  height: 10vh;
+  padding: 1vw 2vw;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+footer h4, footer a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-white);
+}
+
+#footer-part1, #footer-part2, #footer-part3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+
+#footer-part2 {
+  flex-direction: column;
+}
+
+#footer-part2 h2 {
+  font-size: 3vw;
+}
+
+#footer-part3 i{
+  font-size: 2vw;
 }
