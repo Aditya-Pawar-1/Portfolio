@@ -33,6 +33,9 @@ const page3ImageContainer2Img = document.querySelector(
 
 const linkedin = document.querySelectorAll(".linkedin");
 
+const Home = document.querySelector("#Home-nav");
+const Skills = document.querySelector("#Skills-nav");
+const Projects = document.querySelector("#Projects-nav");
 const page1video = document.querySelector("#video-container video");
 const circle = document.querySelector(".clickCircle");
 const circle1 = document.querySelector("#clickCircle1");
@@ -86,6 +89,7 @@ function sheryAnimation() {
     duration: 1,
   });
 }
+
 
 Shery.textAnimate(".text-target", {
   style: 1,
@@ -244,24 +248,86 @@ function arrowAnimation() {
 }
 
 function openLinedin() {
-  linkedin.forEach(element => {
+  linkedin.forEach((element) => {
     element.addEventListener("click", function () {
-      window.open(
-        "https://www.linkedin.com/in/aditya-pawar-dev", "_blank");
+      window.open("https://www.linkedin.com/in/aditya-pawar-dev", "_blank");
     });
-  })
+  });
 }
 
-function footerMail(){
-  document.querySelector("#footer-part1").addEventListener("click", function () {
-      
+function footerMail() {
+  document
+    .querySelector("#footer-part1")
+    .addEventListener("click", function () {});
+}
+
+function allpagesAnimation() {
+  gsap.from("#page2 #page2-svg-container .skill-block", {
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#page2 ",
+      scroller: "main",
+      start: "top 30%",
+      end: "top 5%",
+      scrub: 4,
+    },
+  });
+
+  gsap.from("#page3-image-container1", {
+    x: -1000,
+    scrollTrigger: {
+      trigger: "#page3-image-container1 ",
+      scroller: "main",
+      start: "-10% 35%",
+      end: "10% 30%",
+      scrub: 2,
+    },
+  });
+
+  if (window.outerWidth > 1024) {
+    gsap.from("#arrow1", {
+      x: 1000,
+      scrollTrigger: {
+        trigger: "#arrow1",
+        scroller: "main",
+        start: "10% 100%",
+        end: "55% 80%",
+        scrub: 2,
+      },
+    });
+    gsap.from("#page3 #arrow2", {
+      x: -1000,
+      duration: 0.3,
+      scrollTrigger: {
+        trigger: "#page3 arrow2",
+        scroller: "main",
+        start: "310% 15%",
+        end: "320% 18%",
+        scrub: 3,
+      },
+    });
+  }
+
+  gsap.from("#page3 #page3-image-container2", {
+    x: 1000,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: "#page3 #page3-image-container2",
+      scroller: "main",
+      start: "-15% 15%",
+      end: "-5% 15%",
+      scrub: 3,
+    },
   });
 }
 
 locomotiveAnimation();
 sheryAnimation();
 page3ImageContainerAnimation1();
-page3ImageContainerAnimation2()
+page3ImageContainerAnimation2();
 page1videoAnimation();
 arrowAnimation();
 openLinedin();
+allpagesAnimation();
+navAnimation();

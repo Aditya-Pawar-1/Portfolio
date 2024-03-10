@@ -234,7 +234,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 5vw;
+  margin-top: 2vw;
 }
 
 #page3-part2 {
@@ -299,7 +299,7 @@ nav {
 }
 
 #page4-text {
-  padding: 5vw 10vw 5vw 0;
+  padding: 6vw 10vw 5vw 0;
 }
 
 #page4 h2 {
