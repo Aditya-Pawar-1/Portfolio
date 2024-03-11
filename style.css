@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Helvetica";
-  src: url(./assets/fonts/Helvetica.ttf);
+  src: url(./assets/fonts/Helvetica.woff2);
 }
 
 @font-face {
-  font-family: "Helvetica Light";
-  src: url(./assets/fonts/helvetica-light-587ebe5a59211.ttf);
+  font-family: "Helevtica Light";
+  src: url(./assets/fonts/Helvetica\ Light.woff2);
 }
 
 :root {
@@ -234,7 +234,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 5vw;
+  margin-top: 2vw;
 }
 
 #page3-part2 {
@@ -299,7 +299,7 @@ nav {
 }
 
 #page4-text {
-  padding: 5vw 10vw 5vw 0;
+  padding: 6vw 10vw 5vw 0;
 }
 
 #page4 h2 {
@@ -332,7 +332,7 @@ nav {
 .project-cards img {
   height: 80%;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .project-card-part2 {
