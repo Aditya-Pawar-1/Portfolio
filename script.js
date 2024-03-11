@@ -8,9 +8,8 @@ const arr = [
 ];
 
 const arr2 = [
-  "./assets/images/Lost&Found.png",
   "./assets/images/HeavenHomes.png",
-];
+  "./assets/images/Lost&Found.png",];
 
 const page3ImageContainer = document.querySelector(".page3-image-container");
 const page3ImageContainer1 = document.querySelector("#page3-image-container1");
@@ -261,65 +260,63 @@ function footerMail() {
 }
 
 function allpagesAnimation() {
-  function allpagesAnimation() {
-    if (window.outerWidth > 1024) {
-      gsap.from("#page2 #page2-svg-container .skill-block", {
-        opacity: 0,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: "#page2 ",
-          scroller: "main",
-          start: "top 30%",
-          end: "top 5%",
-          scrub: 4,
-        },
-      });
+  if (window.outerWidth > 1024) {
+    gsap.from("#page2 #page2-svg-container .skill-block", {
+      opacity: 0,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: "#page2 ",
+        scroller: "main",
+        start: "top 30%",
+        end: "top 5%",
+        scrub: 4,
+      },
+    });
 
-      gsap.from("#page3-image-container1", {
-        x: -1000,
-        scrollTrigger: {
-          trigger: "#page3-image-container1 ",
-          scroller: "main",
-          start: "-10% 35%",
-          end: "10% 30%",
-          scrub: 2,
-        },
-      });
+    gsap.from("#page3-image-container1", {
+      x: -1000,
+      scrollTrigger: {
+        trigger: "#page3-image-container1 ",
+        scroller: "main",
+        start: "-10% 35%",
+        end: "10% 30%",
+        scrub: 2,
+      },
+    });
 
-      gsap.from("#arrow1", {
-        x: 1000,
-        scrollTrigger: {
-          trigger: "#arrow1",
-          scroller: "main",
-          start: "10% 100%",
-          end: "55% 80%",
-          scrub: 2,
-        },
-      });
-      gsap.from("#page3 #arrow2", {
-        x: -1000,
-        duration: 0.3,
-        scrollTrigger: {
-          trigger: "#page3 arrow2",
-          scroller: "main",
-          start: "310% 15%",
-          end: "320% 18%",
-          scrub: 3,
-        },
-      });
+    gsap.from("#arrow1", {
+      x: 1000,
+      scrollTrigger: {
+        trigger: "#arrow1",
+        scroller: "main",
+        start: "10% 100%",
+        end: "55% 80%",
+        scrub: 2,
+      },
+    });
+    gsap.from("#page3 #arrow2", {
+      x: -1000,
+      duration: 0.3,
+      scrollTrigger: {
+        trigger: "#page3 arrow2",
+        scroller: "main",
+        start: "310% 15%",
+        end: "320% 18%",
+        scrub: 3,
+      },
+    });
 
-      gsap.from("#page3 #page3-image-container2", {
-        x: 1000,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: "#page3 #page3-image-container2",
-          scroller: "main",
-          start: "-15% 15%",
-          end: "-5% 15%",
-          scrub: 3,
-        },
-      });
-    }
+    gsap.from("#page3 #page3-image-container2", {
+      x: 1000,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: "#page3 #page3-image-container2",
+        scroller: "main",
+        start: "-15% 15%",
+        end: "-5% 15%",
+        scrub: 3,
+      },
+    });
   }
 }
 
