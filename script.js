@@ -260,7 +260,6 @@ function footerMail() {
     .addEventListener("click", function () {});
 }
 
-function allpagesAnimation() {
   function allpagesAnimation() {
     if (window.outerWidth > 1024) {
       gsap.from("#page2 #page2-svg-container .skill-block", {
@@ -321,7 +320,6 @@ function allpagesAnimation() {
       });
     }
   }
-}
 
 locomotiveAnimation();
 sheryAnimation();
