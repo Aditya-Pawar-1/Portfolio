@@ -326,7 +326,6 @@ nav {
   width: 25vw;
   background-color: var(--text-white);
   border-radius: 1vw;
-  border: none;
   overflow: hidden;
 }
 
