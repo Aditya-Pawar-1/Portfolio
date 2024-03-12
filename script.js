@@ -9,7 +9,8 @@ const arr = [
 
 const arr2 = [
   "./assets/images/HeavenHomes.png",
-  "./assets/images/Lost&Found.png",];
+  "./assets/images/Lost&Found.png",
+];
 
 const page3ImageContainer = document.querySelector(".page3-image-container");
 const page3ImageContainer1 = document.querySelector("#page3-image-container1");
@@ -31,16 +32,17 @@ const page3ImageContainer2Img = document.querySelector(
 );
 
 const linkedin = document.querySelectorAll(".linkedin");
-
 const Home = document.querySelector("#Home-nav");
 const Skills = document.querySelector("#Skills-nav");
 const Projects = document.querySelector("#Projects-nav");
+const page1videoContainer = document.querySelector("#video-container");
 const page1video = document.querySelector("#video-container video");
 const circle = document.querySelector(".clickCircle");
 const circle1 = document.querySelector("#clickCircle1");
 const circle2 = document.querySelector("#clickCircle2");
 const arrow1 = document.querySelector("#arrow1");
 const arrow2 = document.querySelector("#arrow2");
+const races = document.querySelector(".races");
 
 function locomotiveAnimation() {
   gsap.registerPlugin(ScrollTrigger);
@@ -87,16 +89,15 @@ function sheryAnimation() {
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
+  Shery.textAnimate(".text-target", {
+    style: 1,
+    y: 10,
+    delay: 0.1,
+    duration: 2,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    multiplier: 0.1,
+  });
 }
-
-Shery.textAnimate(".text-target", {
-  style: 1,
-  y: 10,
-  delay: 0.1,
-  duration: 2,
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  multiplier: 0.1,
-});
 
 function page3ImageContainerAnimation1() {
   var imageIncrementer = 0;
@@ -320,6 +321,31 @@ function allpagesAnimation() {
   }
 }
 
+function horizontalScroll() {
+  function getScrollAmount() {
+    let racesWidth = races.scrollWidth;
+    return -(racesWidth - window.innerWidth);
+  }
+
+  const tween = gsap.to(races, {
+    x: getScrollAmount,
+    duration: 3,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: ".racesWrapper",
+    scroller: "main",
+    start: "16% 20%",
+    end: () => `+=${getScrollAmount() * -1}`,
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    invalidateOnRefresh: true,
+    // markers:true
+  });
+}
+
 locomotiveAnimation();
 sheryAnimation();
 page3ImageContainerAnimation1();
@@ -328,3 +354,4 @@ page1videoAnimation();
 arrowAnimation();
 openLinedin();
 allpagesAnimation();
+horizontalScroll();
