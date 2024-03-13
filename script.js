@@ -246,7 +246,7 @@ function arrowAnimation() {
   });
 }
 
-function openLinedin() {
+function openLinkedin() {
   linkedin.forEach((element) => {
     element.addEventListener("click", function () {
       window.open("https://www.linkedin.com/in/aditya-pawar-dev", "_blank");
@@ -322,28 +322,30 @@ function allpagesAnimation() {
 }
 
 function horizontalScroll() {
-  function getScrollAmount() {
-    let racesWidth = races.scrollWidth;
-    return -(racesWidth - window.innerWidth);
+  if (window.outerWidth > 1024) {
+    function getScrollAmount() {
+      let racesWidth = races.scrollWidth;
+      return -(racesWidth - window.innerWidth);
+    }
+
+    const tween = gsap.to(races, {
+      x: getScrollAmount,
+      duration: 3,
+      ease: "none",
+    });
+
+    ScrollTrigger.create({
+      trigger: ".racesWrapper",
+      scroller: "main",
+      start: "16% 20%",
+      end: () => `+=${getScrollAmount() * -1}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+      invalidateOnRefresh: true,
+      // markers:true
+    });
   }
-
-  const tween = gsap.to(races, {
-    x: getScrollAmount,
-    duration: 3,
-    ease: "none",
-  });
-
-  ScrollTrigger.create({
-    trigger: ".racesWrapper",
-    scroller: "main",
-    start: "16% 20%",
-    end: () => `+=${getScrollAmount() * -1}`,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    invalidateOnRefresh: true,
-    // markers:true
-  });
 }
 
 locomotiveAnimation();
@@ -352,6 +354,6 @@ page3ImageContainerAnimation1();
 page3ImageContainerAnimation2();
 page1videoAnimation();
 arrowAnimation();
-openLinedin();
+openLinkedin();
 allpagesAnimation();
 horizontalScroll();

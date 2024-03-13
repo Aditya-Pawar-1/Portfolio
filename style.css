@@ -315,13 +315,14 @@ nav {
   font-weight: 500;
 }
 
-/* #page4-project-cards-container {
+#page4 section {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 3vw;
-} */
+  justify-content: center;
+  padding-bottom: 5vh;
+  height: 100vh;
+  width: 100vw;
+}
 
 .project-cards {
   height: 100%;
@@ -346,7 +347,6 @@ nav {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
-
 }
 
 .project-card-part2 button {
@@ -366,15 +366,6 @@ nav {
   padding-left: 1vw;
   font-size: 2vw;
   font-weight: 500;
-}
-
-#page4 section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 5vh;
-  height: 100vh;
-  width: 100vw;
 }
 
 .races {
@@ -592,9 +583,8 @@ footer a {
 
   /* page4 */
   #page4 {
-    height: fit-content;
+    min-height: fit-content;
     padding-left: 0;
-    margin-bottom: 10vh;
   }
 
   #page4-text {
@@ -610,14 +600,19 @@ footer a {
     font-size: 1.2vh;
   }
 
-  /* #page4-project-cards-container {
+  #page4 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    gap: 3vh;
-  } */
+    justify-content: center;
+    padding-bottom: 5vh;
+    height: fit-content;
+    width: 100vw;
+  }
+
+  .races {
+    flex-wrap: wrap;
+  }
 
   .project-cards {
     height: 25vh;
@@ -718,6 +713,7 @@ footer a {
   /* page2 */
   #page2 {
     height: fit-content;
+    margin-bottom: 2vh;
   }
 
   #page2-text {
@@ -733,8 +729,11 @@ footer a {
   }
 
   #page2-svg-container {
-    padding: 0 10% 0 15%;
-    gap: 8vh 12vh;
+    padding: 8vw;
+    gap: 5vw 20vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .skill-block {
@@ -813,22 +812,31 @@ footer a {
     font-size: 1.8vh;
   }
 
-  #page4-project-cards-container {
+  #page4 section {
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+    height: fit-content;
+    width: 100vw;
+  }
+
+  .races {
+    flex-wrap: wrap;
   }
 
   .project-cards {
     height: 30vh;
-    width: 60vw;
+    width: 70vw;
     border-radius: 1vh;
   }
 
   .project-cards img {
-    height: 80%;
+    height: 100%;
     width: 100%;
   }
+
 
   .project-card-part2 button {
     padding: 0.5vh 1.8vh;
