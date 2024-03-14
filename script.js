@@ -203,19 +203,33 @@ function page3ImageContainerAnimation2() {
 
 function page1videoAnimation() {
   page1video.addEventListener("mouseenter", function () {
-    gsap.to("#video-container video", {
+    gsap.to("#video-container", {
       scale: 1.2,
       duration: 0.1,
       ease: "0.25,0.1,0.25,1",
     });
   });
   page1video.addEventListener("mouseleave", function () {
-    gsap.to("#video-container video", {
+    gsap.to("#video-container", {
       scale: 1,
       duration: 0.1,
       ease: "0.25,0.1,0.25,1",
     });
   });
+  // page1video.addEventListener("mouseenter", function () {
+  //   gsap.to("#video-container video", {
+  //     scale: 1.2,
+  //     duration: 0.1,
+  //     ease: "0.25,0.1,0.25,1",
+  //   });
+  // });
+  // page1video.addEventListener("mouseleave", function () {
+  //   gsap.to("#video-container video", {
+  //     scale: 1,
+  //     duration: 0.1,
+  //     ease: "0.25,0.1,0.25,1",
+  //   });
+  // });
 }
 
 function arrowAnimation() {

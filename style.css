@@ -105,12 +105,12 @@ nav {
 }
 
 #video-container {
-  width: 50vw;
-  height: 40vw;
+  width: 45vw;
+  height: 50vw;
   position: absolute;
   top: 20%;
   right: 0%;
-  /* border: 2px solid red; */
+  /* border: 2px solid red;  */
   object-fit: cover;
   overflow: hidden;
 }
@@ -120,6 +120,14 @@ nav {
   top: 0%;
   left: -20%;
   width: 150%;
+}
+
+#video-container spline-viewer {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 100%;
+  /* border: 2px solid blue; */
 }
 
 #page1-text {
@@ -453,12 +461,24 @@ footer a {
 
   #video-container {
     width: 100%;
-    height: 40vh;
-    position: absolut;
+    height: 60vh;
+    position: absolute;
     top: 60%;
-    object-fit: cover;
-    overflow: hidden;
+    left: 0%;
+    object-fit: contain;
+    /* overflow: hidden; */
+    /* border: 2px solid blue; */
   }
+
+  #video-container spline-viewer {
+    position: absolute;
+    top: -12%;
+    left: -25%;
+    width: 150%;
+    scale: 0.5;
+    border: 2px solid blue;
+  }
+
 
   #page1-text {
     padding: 5vh 0 0 5vh;
@@ -685,10 +705,19 @@ footer a {
   /* page1 */
   #video-container {
     width: 50vh;
-    height: 40vh;
+    height: 50vh;
     position: absolute;
     top: 50%;
     right: 20%;
+    border-radius: 50%;
+  }
+
+  #video-container spline-viewer {
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    width: 100%;
+    /* border: red 2px solid; */
   }
 
   #page1-text {
